@@ -3,7 +3,7 @@
 //
 // Author: Jeffrey Stedfast <jestedfa@microsoft.com>
 //
-// Copyright (c) 2013-2024 .NET Foundation and Contributors
+// Copyright (c) 2013-2025 .NET Foundation and Contributors
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -235,7 +235,9 @@ namespace MailKit.Net.Imap {
 		/// Get the specified body part.
 		/// </summary>
 		/// <remarks>
-		/// Gets the specified body part.
+		/// <para>Gets the specified body part.</para>
+		/// <note type="note">For more information about how to construct the <paramref name="partSpecifier"/>,
+		/// see <a href="https://www.rfc-editor.org/rfc/rfc3501.html#section-6.4.5">RFC3501, Section 6.4.5</a>.</note>
 		/// </remarks>
 		/// <returns>The body part.</returns>
 		/// <param name="uid">The UID of the message.</param>
@@ -281,7 +283,9 @@ namespace MailKit.Net.Imap {
 		/// Asynchronously get the specified body part.
 		/// </summary>
 		/// <remarks>
-		/// Gets the specified body part.
+		/// <para>Gets the specified body part.</para>
+		/// <note type="note">For more information about how to construct the <paramref name="partSpecifier"/>,
+		/// see <a href="https://www.rfc-editor.org/rfc/rfc3501.html#section-6.4.5">RFC3501, Section 6.4.5</a>.</note>
 		/// </remarks>
 		/// <returns>The body part.</returns>
 		/// <param name="uid">The UID of the message.</param>
@@ -327,7 +331,9 @@ namespace MailKit.Net.Imap {
 		/// Get the specified body part.
 		/// </summary>
 		/// <remarks>
-		/// Gets the specified body part.
+		/// <para>Gets the specified body part.</para>
+		/// <note type="note">For more information about how to construct the <paramref name="partSpecifier"/>,
+		/// see <a href="https://www.rfc-editor.org/rfc/rfc3501.html#section-6.4.5">RFC3501, Section 6.4.5</a>.</note>
 		/// </remarks>
 		/// <returns>The body part.</returns>
 		/// <param name="index">The index of the message.</param>
@@ -373,7 +379,9 @@ namespace MailKit.Net.Imap {
 		/// Asynchronously get the specified body part.
 		/// </summary>
 		/// <remarks>
-		/// Gets the specified body part.
+		/// <para>Gets the specified body part.</para>
+		/// <note type="note">For more information about how to construct the <paramref name="partSpecifier"/>,
+		/// see <a href="https://www.rfc-editor.org/rfc/rfc3501.html#section-6.4.5">RFC3501, Section 6.4.5</a>.</note>
 		/// </remarks>
 		/// <returns>The body part.</returns>
 		/// <param name="index">The index of the message.</param>
@@ -422,7 +430,7 @@ namespace MailKit.Net.Imap {
 		/// <para>Gets the streams for the specified messages.</para>
 		/// </remarks>
 		/// <param name="uids">The uids of the messages.</param>
-		/// <param name="callback"></param>
+		/// <param name="callback">A callback method that gets called for each stream as it is received.</param>
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <param name="progress">The progress reporting mechanism.</param>
 		/// <exception cref="System.ArgumentNullException">
@@ -467,7 +475,7 @@ namespace MailKit.Net.Imap {
 		/// </remarks>
 		/// <returns>An awaitable task.</returns>
 		/// <param name="uids">The uids of the messages.</param>
-		/// <param name="callback"></param>
+		/// <param name="callback">A callback method that gets called for each stream as it is received.</param>
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <param name="progress">The progress reporting mechanism.</param>
 		/// <exception cref="System.ArgumentNullException">
@@ -511,7 +519,7 @@ namespace MailKit.Net.Imap {
 		/// <para>Gets the streams for the specified messages.</para>
 		/// </remarks>
 		/// <param name="indexes">The indexes of the messages.</param>
-		/// <param name="callback"></param>
+		/// <param name="callback">A callback method that gets called for each stream as it is received.</param>
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <param name="progress">The progress reporting mechanism.</param>
 		/// <exception cref="System.ArgumentNullException">
@@ -556,7 +564,7 @@ namespace MailKit.Net.Imap {
 		/// </remarks>
 		/// <returns>An awaitable task.</returns>
 		/// <param name="indexes">The indexes of the messages.</param>
-		/// <param name="callback"></param>
+		/// <param name="callback">A callback method that gets called for each stream as it is received.</param>
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <param name="progress">The progress reporting mechanism.</param>
 		/// <exception cref="System.ArgumentNullException">
@@ -601,7 +609,7 @@ namespace MailKit.Net.Imap {
 		/// </remarks>
 		/// <param name="min">The minimum index.</param>
 		/// <param name="max">The maximum index, or <c>-1</c> to specify no upper bound.</param>
-		/// <param name="callback"></param>
+		/// <param name="callback">A callback method that gets called for each stream as it is received.</param>
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <param name="progress">The progress reporting mechanism.</param>
 		/// <exception cref="System.ArgumentOutOfRangeException">
@@ -647,7 +655,7 @@ namespace MailKit.Net.Imap {
 		/// <returns>An awaitable task.</returns>
 		/// <param name="min">The minimum index.</param>
 		/// <param name="max">The maximum index, or <c>-1</c> to specify no upper bound.</param>
-		/// <param name="callback"></param>
+		/// <param name="callback">A callback method that gets called for each stream as it is received.</param>
 		/// <param name="cancellationToken">The cancellation token.</param>
 		/// <param name="progress">The progress reporting mechanism.</param>
 		/// <exception cref="System.ArgumentOutOfRangeException">
